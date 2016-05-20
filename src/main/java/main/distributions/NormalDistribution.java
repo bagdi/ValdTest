@@ -33,6 +33,10 @@ public class NormalDistribution {
         return x;
     }
 
+    public double probabilityDensityFunc(double mean, double variance, double x) {
+        return (1 / (Math.sqrt(variance) * Math.sqrt(2 * Math.PI))) * Math.exp(-Math.pow(x - mean, 2) / (2 * variance));
+    }
+
     public static double getNormSum() {
         return normSum;
     }

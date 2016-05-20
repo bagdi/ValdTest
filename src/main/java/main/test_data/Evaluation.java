@@ -1,6 +1,6 @@
 package main.test_data;
 
-import java.util.List;
+import java.util.*;
 
 public class Evaluation {
 
@@ -30,6 +30,15 @@ public class Evaluation {
         }
         b = b / getKSquare(ban);
         return b;
+    }
+
+    public static List<Double> getPsiForTrendTest(double t) {
+        List<Double> result = new ArrayList<>();
+        result.add(1.0);
+        result.add(t/10);
+        result.add(Math.pow(t, 2)/100);
+        result.add(Math.pow(t, 3)/1000);
+        return result;
     }
 
     @Deprecated
